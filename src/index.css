@@ -25,6 +25,7 @@ a:hover {
 }
 
 body {
+  font-family: "Sansation", sans-serif;
   margin: 0;
   display: flex;
   place-items: center;
