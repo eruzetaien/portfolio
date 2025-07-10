@@ -1,3 +1,4 @@
+import Menu from "../components/Menu"
 import Profile from "../components/Profile"
 import Resource from "../components/Resource"
 
@@ -26,7 +27,9 @@ function Homescreen() {
                     <Resource></Resource>
                   </div>
                 </div>
-                <div className="w-1/2 h-1/6 bg-amber-300"></div>
+                <div className="flex flex-col justify-end">
+                  <Menu></Menu>
+                </div>
               </div>
             </div>
           

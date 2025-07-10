@@ -3,7 +3,7 @@ import React from "react";
 const Profile: React.FC = () => {
 
   return (
-    <div className="w-74 h-19 flex items-center gap-x-[10px] bg-[#252B3B] p-1 rounded-[10px] hover:scale-105">
+    <div className="w-74 h-19 flex items-center gap-x-[10px] bg-[#252B3B] p-1 rounded-[10px] hover:scale-105 transition-transform duration-200">
       <img className="h-full" src="src/assets/profile.svg" alt="profile"/>
       <div className="flex flex-col leading-none gap-y-2">
         <h2 className="text-[20px] text-[var(--bluish-white)] font-normal">Ruzain</h2>
