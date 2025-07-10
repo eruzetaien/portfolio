@@ -92,3 +92,24 @@ button:focus-visible {
   }
 }
 
+.float-animation {
+  animation-name: float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-direction: alternate;
+}
+
+.float-animation:hover {
+  animation-play-state: paused;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6%);
+  }
+}
+

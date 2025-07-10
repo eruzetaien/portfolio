@@ -6,7 +6,6 @@ function Homescreen() {
 
   return (
     <>
-
       <div className="w-screen h-screen bg-cover bg-bottom-left bg-[url(src/assets/screens/homescreen-bg.png)]">
             <div className="absolute w-screen h-screen bottom-0 left-0 overflow-hidden">
               <img className="absolute -bottom-0 move-animation" style={{ '--duration': '2' } as React.CSSProperties} src="src/assets/clouds/cloud1.png"></img>

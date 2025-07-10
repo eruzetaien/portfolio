@@ -18,10 +18,10 @@ const Menu: React.FC = () => {
 
   return (
     <div className="w-full h-fit flex justify-center items-center gap-x-10 p-1">
-      <IconMenu panel={iconPanel} glow={educationGlow} icon={educationIcon} label="Education" />
-      <IconMenu panel={iconPanel} glow={skillGlow} icon={skillIcon} label="Skill" />
-      <IconMenu panel={iconPanel} glow={questGlow} icon={questIcon} label="Quest" />
-      <IconMenu panel={iconPanel} glow={shopGlow} icon={shopIcon} label="Shop" />
+      <IconMenu panel={iconPanel} glow={educationGlow} icon={educationIcon} label="Education" to="/education"/>
+      <IconMenu panel={iconPanel} glow={skillGlow} icon={skillIcon} label="Skill" to="/skill"/>
+      <IconMenu panel={iconPanel} glow={questGlow} icon={questIcon} label="Quest" to="/quest"/>
+      <IconMenu panel={iconPanel} glow={shopGlow} icon={shopIcon} label="Shop" to="/shop"/>
     </div>
   );
 };

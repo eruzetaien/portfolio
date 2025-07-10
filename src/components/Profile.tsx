@@ -1,15 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const Profile: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("profile");
+  };
 
   return (
-    <div className="w-74 h-19 flex items-center gap-x-[10px] bg-[#252B3B] p-1 rounded-[10px] hover:scale-105 transition-transform duration-200">
-      <img className="h-full" src="src/assets/profile.svg" alt="profile"/>
-      <div className="flex flex-col leading-none gap-y-2">
-        <h2 className="text-[20px] text-[var(--bluish-white)] font-normal">Ruzain</h2>
-        <h3 className="text-[16px] text-[var(--light-green)]">Lv. <span className=" font-bold">16</span> </h3>
+    <button className="w-fit h-fit" onClick={handleClick}>
+      <div className="w-74 h-19 flex items-center gap-x-[10px] bg-[#252B3B] p-1 rounded-[10px] hover:scale-105 transition-transform duration-200">
+        <img className="h-full" src="src/assets/profile.svg" alt="profile"/>
+        <div className="flex flex-col items-start leading-none gap-y-2">
+          <h2 className="text-[20px] text-[var(--bluish-white)] font-normal">Ruzain</h2>
+          <h3 className="text-[16px] text-[var(--light-green)]">Lv. <span className=" font-bold">16</span> </h3>
+        </div>
       </div>
-    </div>
+    </button>
   );
 };
 
