@@ -1,3 +1,4 @@
+import Profile from "../components/Profile"
 import Resource from "../components/Resource"
 
 function Homescreen() {
@@ -16,8 +17,11 @@ function Homescreen() {
             </div>
 
             <div className="absolute w-screen h-screen bg-contain bg-bottom-right bg-no-repeat bg-[url(src/assets/screens/homescreen-fg.png)]">
-              <div className="w-screen h-screen px-16 py-8 flex flex-col justify-between items-center">
-                <div className="w-full h-1/18 flex justify-end">
+              <div className="w-screen h-screen px-16 py-[24px] flex flex-col justify-between items-center">
+                <div className="w-full h-1/18 flex justify-between items-start">
+                  <div>
+                    <Profile></Profile>
+                  </div>
                   <div className="w-1/2 h-full">
                     <Resource></Resource>
                   </div>
