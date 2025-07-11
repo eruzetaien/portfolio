@@ -16,10 +16,16 @@ function ShopPage() {
         </div>
 
         <div className="w-full h-full px-24 pt-10 flex justify-start gap-2">
-          <button className="w-1/5 h-fit hover:scale-102 ">
+          <button className="relative w-1/5 h-fit hover:scale-102 ">
               <img
-                className="w-full hover:scale-102 "
+                className="w-full"
                 src="src/assets/shop-items/item-1.svg"
+                alt="costume"
+              />
+              <img
+                className="w-2/3 absolute top-10 left-1/2 -translate-x-1/2 pointer-events-none"
+                style={{ imageRendering: "pixelated" }}
+                src="src/assets/shop-items/executive-costume.png"
                 alt="costume"
               />
           </button>
