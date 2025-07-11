@@ -41,7 +41,7 @@ const QuestItem: React.FC<QuestItemProps> = ({
             <span className="font-bold">{progress}%</span>
           </div>
         </div>
-        <div className="w-1/4 flex justify-end items-center pr-2">
+        <div className="w-1/4 flex justify-end items-center pr-5">
           {rewardImageSrc && (
             <img
               className="h-2/3 hover:scale-102"
