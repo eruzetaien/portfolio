@@ -19,7 +19,10 @@ const QuestItem: React.FC<QuestItemProps> = ({
 
   return (
     <div className="flex h-30 flex-shrink-0">
-      <div className="w-4/5 flex h-full bg-[#7385BD] rounded-l-[10px] px-5">
+      <div className="w-4/5 flex h-full bg-[#7385BD] rounded-l-[4px]">
+        <div className={`w-3 mr-3 rounded-l-[4px] ${isCompleted ? "bg-[#FFE66B]" : "bg-[var(--main-blue)]"}`} >
+
+        </div>
         <div className="w-3/4 flex flex-col leading-none py-4 justify-between gap-y-1">
           <div className="flex flex-1 flex-col gap-y-3">
             <h2 className="text-[20px] text-white font-bold">{title}</h2>
@@ -27,6 +30,7 @@ const QuestItem: React.FC<QuestItemProps> = ({
               {description}
             </h3>
           </div>
+          
           <div className="flex gap-x-2 items-center">
             <div className="w-1/2 h-[6px] bg-[#495891] rounded-full overflow-hidden">
               <div
@@ -48,7 +52,7 @@ const QuestItem: React.FC<QuestItemProps> = ({
         </div>
       </div>
 
-      <div className="w-1/5 bg-[#8FA0D6] rounded-r-[10px] flex justify-center items-center px-7">
+      <div className="w-1/5 bg-[#8FA0D6] rounded-r-[4px] flex justify-center items-center px-7">
         <button onClick={onButtonClick} className={`${!isCompleted ? "hover:scale-102" : ""}`}>
           <img
             className={`w-full ${
