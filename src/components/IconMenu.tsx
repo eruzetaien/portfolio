@@ -17,7 +17,7 @@ const IconMenu: React.FC<IconMenuProps> = ({ panel, glow, icon, label, to }) => 
   };
 
   return (
-    <button className="flex flex-col items-center hover:scale-110 transition-transform duration-200" onClick={handleClick}>
+    <button className="flex flex-col items-center hover:scale-110 cursor-pointer transition-transform duration-200" onClick={handleClick}>
       <div className="relative h-20 w-20">
         <img className="absolute top-0 z-0" src={panel} alt="" />
         <img className="absolute top-0 z-10 mix-blend-hard-light" src={glow} alt="" />

@@ -12,7 +12,7 @@ const Profile: React.FC = () => {
 
   return (
     <button className="w-fit h-fit" onClick={handleClick}>
-      <div className="w-74 h-19 flex items-center gap-x-[10px] bg-[#252B3B] p-1 rounded-[10px] hover:scale-105 transition-transform duration-200">
+      <div className="w-74 h-19 flex items-center gap-x-[10px] bg-[#252B3B] p-1 rounded-[10px] hover:scale-105 cursor-pointer transition-transform duration-200">
         <img className="h-full" src="src/assets/profile.svg" alt="profile"/>
         <div className="flex flex-col items-start leading-none gap-y-2">
           <h2 className="text-[20px] text-[var(--bluish-white)] font-normal">{playerData.name}</h2>

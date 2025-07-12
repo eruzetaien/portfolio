@@ -16,7 +16,7 @@ const Resource: React.FC = () => {
         <span className="absolute right-0 font-bold text-xl px-6">{gold.toLocaleString()}</span>
       </div>
 
-    <button className=" hover:scale-105">
+    <button className=" hover:scale-105 cursor-pointer">
       <img
         src="src/assets/game-icons/setting.svg"
         alt="Settings"
