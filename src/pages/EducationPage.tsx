@@ -15,7 +15,7 @@ function EducationPage() {
             </div>
         </div>
 
-        <div className="w-full h-full px-16 pb-4 flex flex-col justify-between items-center gap-y-5 overflow-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+        <div className="w-full h-full px-16 pb-4 flex flex-col justify-between items-center">
           <div className="flex w-full items-start justify-center pt-5 pb-10 gap-x-12">
             <img className="w-1/5" src="src/assets/bangkit-banner.svg" alt=""/>
             <img className="w-1/4" src="src/assets/ui-banner.svg" alt=""/>

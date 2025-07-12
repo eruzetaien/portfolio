@@ -20,7 +20,7 @@ const QuestItem: React.FC<QuestItemProps> = ({
   return (
     <div className="flex h-30 flex-shrink-0">
       <div className="w-4/5 flex h-full bg-[#7385BD] rounded-l-[4px]">
-        <div className={`w-3 mr-3 rounded-l-[4px] ${isCompleted ? "bg-[#FFE66B]" : "bg-[var(--main-blue)]"}`} >
+        <div className={`w-3 mr-3 rounded-l-[4px] ${isCompleted ? "bg-[var(--yellow)]" : "bg-[var(--main-blue)]"}`} >
 
         </div>
         <div className="w-3/4 flex flex-col leading-none py-4 justify-between gap-y-1">
@@ -34,7 +34,7 @@ const QuestItem: React.FC<QuestItemProps> = ({
           <div className="flex gap-x-2 items-center">
             <div className="w-1/2 h-[6px] bg-[#495891] rounded-full overflow-hidden">
               <div
-                className="h-full bg-[#FFE66B] rounded-full"
+                className="h-full bg-[var(--yellow)] rounded-full"
                 style={{ width: `${progress}%` }}
               ></div>
             </div>

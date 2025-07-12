@@ -19,6 +19,7 @@
   --light-green: #8CF3A6;
   --grey: #B6C2CB;
   --main-blue: #4EB2FF;
+  --yellow: #FFE66B;
 }
 
 a {
@@ -75,6 +76,33 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+.sprite {
+  background-image: url('src/assets/idle-spritesheet.png');
+  background-repeat: no-repeat;
+  background-size: 300% 100%;
+  animation: play 1s steps(3) infinite;
+  image-rendering: pixelated;
+}
+
+@keyframes play {
+  from {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: 150% 0;
+  }
+}
+
+@keyframes play2 {
+  from {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: -390px 0;
+  }
+}
+
+
 
 .move-animation {
   animation: left-to-right calc(4s * var(--duration)) linear infinite;
