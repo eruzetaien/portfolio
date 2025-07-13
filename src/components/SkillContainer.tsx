@@ -12,7 +12,7 @@ interface SkillContainerProps {
 
 const SkillContainer: React.FC<SkillContainerProps> = ({ title, items }) => {
   return (
-    <div className="bg-[#1F263980]  min-w-3/4 h-fit rounded-[10px] flex flex-col p-[10px]">
+    <div className="bg-[#1F263980]  min-w-3/4 h-fit rounded-[10px] flex flex-col p-[10px] fade-in">
       <div className="bg-[#495891] w-full h-12 rounded-t-[10px] flex justify-center items-center">
         <h3 className="text-[#D8E0FF] text-lg font-bold">{title}</h3>
       </div>

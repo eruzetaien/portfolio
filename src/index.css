@@ -142,4 +142,31 @@ button:focus-visible {
     transform: translateY(-6%);
   }
 }
+.expand-circle-mask-animation {
+  animation: reveal 5s ease-out forwards;
+  clip-path: circle(0% at center);
+}
+
+@keyframes reveal {
+  to {
+    clip-path: circle(150% at center); /* Expand beyond bounds */
+  }
+}
+
+.expand-circle-mask-animation-with-delay {
+  animation: reveal 3s ease-out forwards;
+  clip-path: circle(0% at center);
+  animation-delay: 1s;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 

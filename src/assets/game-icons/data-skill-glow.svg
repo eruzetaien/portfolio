@@ -1,0 +1,73 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_339_177)">
+<mask id="mask0_339_177" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="50" y="45" width="50" height="50">
+<path d="M50 78.3333H56V95H50V78.3333Z" fill="white"/>
+<path d="M61 53.3333H67V95H61V53.3333Z" fill="white"/>
+<path d="M72 45H78V95H72V45Z" fill="white"/>
+<path d="M83 61.6667H89V95H83V61.6667Z" fill="white"/>
+<path d="M94 70H100V95H94V70Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_339_177)">
+<circle cx="75.0001" cy="70" r="41.0792" fill="#FFE66B"/>
+</g>
+<path d="M75 29.5C100.129 29.5 120.5 49.871 120.5 75C120.5 100.129 100.129 120.5 75 120.5C49.871 120.5 29.5 100.129 29.5 75C29.5 49.871 49.871 29.5 75 29.5Z" stroke="#FFE66B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M75 24.9999C102.614 24.9999 125 47.3857 125 74.9999C125 102.614 102.614 125 75 125C47.3858 125 25 102.614 25 74.9999C25 47.3857 47.3858 24.9999 75 24.9999ZM75 27.9999C49.0426 27.9999 28 49.0425 28 74.9999C28 100.957 49.0426 122 75 122C100.957 122 122 100.957 122 74.9999C122 49.0425 100.957 27.9999 75 27.9999Z" fill="#FFE66B"/>
+<path d="M118 74.9999L124 70.9999L130 74.9999L124 78.9999L118 74.9999Z" fill="#FFE66B"/>
+<path d="M20 74.9999L26 70.9999L32 74.9999L26 78.9999L20 74.9999Z" fill="#FFE66B"/>
+<path d="M75 118L79 124L75 130L71 124L75 118Z" fill="#FFE66B"/>
+<path d="M75 19.9999L79 25.9999L75 31.9999L71 25.9999L75 19.9999Z" fill="#FFE66B"/>
+</g>
+<g filter="url(#filter1_f_339_177)">
+<mask id="mask1_339_177" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="50" y="45" width="50" height="50">
+<path d="M50 78.3333H56V95H50V78.3333Z" fill="white"/>
+<path d="M61 53.3333H67V95H61V53.3333Z" fill="white"/>
+<path d="M72 45H78V95H72V45Z" fill="white"/>
+<path d="M83 61.6667H89V95H83V61.6667Z" fill="white"/>
+<path d="M94 70H100V95H94V70Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_339_177)">
+<circle cx="75.0001" cy="70" r="41.0792" fill="#FFE66B"/>
+</g>
+<path d="M75 29.5C100.129 29.5 120.5 49.871 120.5 75C120.5 100.129 100.129 120.5 75 120.5C49.871 120.5 29.5 100.129 29.5 75C29.5 49.871 49.871 29.5 75 29.5Z" stroke="#FFE66B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M75 24.9999C102.614 24.9999 125 47.3857 125 74.9999C125 102.614 102.614 125 75 125C47.3858 125 25 102.614 25 74.9999C25 47.3857 47.3858 24.9999 75 24.9999ZM75 27.9999C49.0426 27.9999 28 49.0425 28 74.9999C28 100.957 49.0426 122 75 122C100.957 122 122 100.957 122 74.9999C122 49.0425 100.957 27.9999 75 27.9999Z" fill="#FFE66B"/>
+<path d="M118 74.9999L124 70.9999L130 74.9999L124 78.9999L118 74.9999Z" fill="#FFE66B"/>
+<path d="M20 74.9999L26 70.9999L32 74.9999L26 78.9999L20 74.9999Z" fill="#FFE66B"/>
+<path d="M75 118L79 124L75 130L71 124L75 118Z" fill="#FFE66B"/>
+<path d="M75 19.9999L79 25.9999L75 31.9999L71 25.9999L75 19.9999Z" fill="#FFE66B"/>
+</g>
+<g filter="url(#filter2_f_339_177)">
+<mask id="mask2_339_177" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="50" y="45" width="50" height="50">
+<path d="M50 78.3333H56V95H50V78.3333Z" fill="white"/>
+<path d="M61 53.3333H67V95H61V53.3333Z" fill="white"/>
+<path d="M72 45H78V95H72V45Z" fill="white"/>
+<path d="M83 61.6667H89V95H83V61.6667Z" fill="white"/>
+<path d="M94 70H100V95H94V70Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_339_177)">
+<circle cx="75.0001" cy="70" r="41.0792" fill="#FFE66B"/>
+</g>
+<path d="M75 29.5C100.129 29.5 120.5 49.871 120.5 75C120.5 100.129 100.129 120.5 75 120.5C49.871 120.5 29.5 100.129 29.5 75C29.5 49.871 49.871 29.5 75 29.5Z" stroke="#FFE66B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M75 24.9999C102.614 24.9999 125 47.3857 125 74.9999C125 102.614 102.614 125 75 125C47.3858 125 25 102.614 25 74.9999C25 47.3857 47.3858 24.9999 75 24.9999ZM75 27.9999C49.0426 27.9999 28 49.0425 28 74.9999C28 100.957 49.0426 122 75 122C100.957 122 122 100.957 122 74.9999C122 49.0425 100.957 27.9999 75 27.9999Z" fill="#FFE66B"/>
+<path d="M118 74.9999L124 70.9999L130 74.9999L124 78.9999L118 74.9999Z" fill="#FFE66B"/>
+<path d="M20 74.9999L26 70.9999L32 74.9999L26 78.9999L20 74.9999Z" fill="#FFE66B"/>
+<path d="M75 118L79 124L75 130L71 124L75 118Z" fill="#FFE66B"/>
+<path d="M75 19.9999L79 25.9999L75 31.9999L71 25.9999L75 19.9999Z" fill="#FFE66B"/>
+</g>
+<defs>
+<filter id="filter0_f_339_177" x="0" y="-0.00012207" width="150" height="150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_339_177"/>
+</filter>
+<filter id="filter1_f_339_177" x="0" y="-0.00012207" width="150" height="150" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_339_177"/>
+</filter>
+<filter id="filter2_f_339_177" x="16" y="15.9999" width="118" height="118" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_339_177"/>
+</filter>
+</defs>
+</svg>
