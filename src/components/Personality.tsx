@@ -48,7 +48,7 @@ const Personality: React.FC = () => {
   return (
     <div className="w-full h-full flex flex-col gap-y-3 overflow-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
       
-      <div className="flex flex-col w-full gap-y-1">
+      <div className="flex flex-col w-full gap-y-0.5">
         {Object.entries(playerPersonality).map(([trait, data]) => (
           <div className="flex gap-x-2">
             <div key={trait} className="flex flex-col w-full">
@@ -83,10 +83,7 @@ const Personality: React.FC = () => {
       </div>
 
       {radarData && (
-        <div className="flex justify-center items-center h-full w-full overflow-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-          {/* <h3 className="text-xl font-semibold mb-4 capitalize text-center">
-            {selectedTrait} Facets
-          </h3> */}
+        <div className="flex pt-1 justify-center items-center h-full w-full overflow-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           <Radar
             className="flex-shrink-0"
             data={radarData}

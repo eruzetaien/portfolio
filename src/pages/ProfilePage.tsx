@@ -26,7 +26,7 @@ function ProfilePage() {
             <img className="h-full" src="src/assets/containers/profile.svg" alt=""/>
             <div className="absolute w-full h-full flex py-10 px-16">
               
-              <div className="w-1/2 h-99/100 pr-10 ">
+              <div className="w-1/2 h-99/100 pr-10">
                 <div className="flex flex-col h-full">
                   
                   <h1 className="font-bold tracking-tight text-white">{playerData.name}</h1>
@@ -52,7 +52,7 @@ function ProfilePage() {
                 </div>  
               </div>
 
-              <div className="w-1/2 h-99/100 pl-10 pt-5 flex flex-col gap-y-3"> 
+              <div className="w-1/2 h-99/100 pt-5 flex flex-col gap-y-2"> 
                 <button
                   onClick={goToBig5PersonalityWeb}
                   className="hover:scale-105 cursor-pointer"
