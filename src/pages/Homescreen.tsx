@@ -1,8 +1,41 @@
-import Menu from "../components/Menu"
-import Profile from "../components/Profile"
-import Resource from "../components/Resource"
+import { useEffect, useRef, useState } from "react";
+import Menu from "../components/Menu";
+import Profile from "../components/Profile";
+import Resource from "../components/Resource";
 
 function Homescreen() {
+const [isVisible, setIsVisible] = useState(true);
+  const isVisibleRef = useRef(true); // 
+  const timeoutRef = useRef<number | null>(null);
+  const idleDuration = 5000; // 5 seconds
+
+  const handleActivity = () => {
+    if (!isVisibleRef.current) {
+      setIsVisible(true);
+    }
+
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = window.setTimeout(() => {
+      isVisibleRef.current = false;
+      setIsVisible(false);
+    }, idleDuration);
+
+    isVisibleRef.current = true; // update latest visible state
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousemove", handleActivity);
+    window.addEventListener("keydown", handleActivity);
+    window.addEventListener("click", handleActivity);
+
+    handleActivity(); // start the timer
+
+    return () => {
+      window.removeEventListener("mousemove", handleActivity);
+      window.removeEventListener("keydown", handleActivity);
+      window.removeEventListener("click", handleActivity);
+    };
+  }, []);
 
   return (
     <>
@@ -18,7 +51,12 @@ function Homescreen() {
 
             <div className="absolute w-screen h-screen bg-contain bg-bottom-right bg-no-repeat bg-[url(src/assets/screens/homescreen-fg.png)]">
               <div className="w-screen h-screen px-16 py-[32px] flex flex-col justify-between items-center">
-                <div className="w-full h-fit flex justify-between items-start">
+                {/* Navbar */}
+                <div
+                  className={`w-full h-fit flex justify-between items-start transition-opacity ${
+                    isVisible ? "opacity-100 duration-500" : "opacity-0 pointer-events-none duration-2000"
+                  }`}
+                >
                   <div>
                     <Profile></Profile>
                   </div>
@@ -26,7 +64,12 @@ function Homescreen() {
                     <Resource></Resource>
                   </div>
                 </div>
-                <div className="flex flex-col justify-end">
+                
+                <div
+                  className={`flex flex-col justify-end transition-opacity ${
+                    isVisible ? "opacity-100 duration-500" : "opacity-0 pointer-events-none duration-2000"
+                  }`}
+                >
                   <Menu></Menu>
                 </div>
               </div>
