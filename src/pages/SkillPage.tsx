@@ -107,21 +107,24 @@ function SkillPage() {
                  onClick={() => setSelectedKey("language")}
               >
                 <img className="absolute h-[87px] left-4 top-4" src="src/assets/game-icons/java-skill.svg" alt="" />
-                <img className="h-30 mix-blend-hard-light expand-circle-mask-animation-with-delay" src="src/assets/game-icons/java-skill-glow.svg" alt="" />
+                <img className="h-30 mix-blend-hard-light expand-circle-mask-animation" 
+                style={{ '--delay': '1' } as React.CSSProperties} src="src/assets/game-icons/java-skill-glow.svg" alt="" />
               </button>
 
               <button className="absolute right-11 top-44.5 hover:scale-105 cursor-pointer"
                 onClick={() => setSelectedKey("framework")}
               >
                 <img className="absolute h-[87px] left-4 top-4" src="src/assets/game-icons/react-skill.svg" alt="" />
-                <img className="h-30 mix-blend-hard-light expand-circle-mask-animation-with-delay" src="src/assets/game-icons/react-skill-glow.svg" alt="" />
+                <img className="h-30 mix-blend-hard-light expand-circle-mask-animation" 
+                style={{ '--delay': '1' } as React.CSSProperties} src="src/assets/game-icons/react-skill-glow.svg" alt="" />
               </button>
 
               <button className="absolute -left-3.5 top-12.5 hover:scale-105 cursor-pointer"
                 onClick={() => setSelectedKey("software")}
               >
                 <img className="absolute h-[87px] left-4 top-4" src="src/assets/game-icons/cicd-skill.svg" alt="" />
-                <img className="h-30 mix-blend-hard-light expand-circle-mask-animation-with-delay" src="src/assets/game-icons/cicd-skill-glow.svg" alt="" />
+                <img className="h-30 mix-blend-hard-light expand-circle-mask-animation" 
+                style={{ '--delay': '1' } as React.CSSProperties} src="src/assets/game-icons/cicd-skill-glow.svg" alt="" />
               </button>
 
               <button className="absolute left-[47px] bottom-[227px]">
@@ -136,14 +139,16 @@ function SkillPage() {
                 onClick={() => setSelectedKey("ml")}
               >
                 <img className="absolute h-[87px] left-4 top-4" src="src/assets/game-icons/ml-skill.svg" alt="" />
-                <img className="h-30 mix-blend-hard-light expand-circle-mask-animation-with-delay" src="src/assets/game-icons/ml-skill-glow.svg" alt="" />
+                <img className="h-30 mix-blend-hard-light expand-circle-mask-animation" 
+                style={{ '--delay': '1' } as React.CSSProperties} src="src/assets/game-icons/ml-skill-glow.svg" alt="" />
               </button>
 
               <button className="absolute right-45.5 bottom-10.5 hover:scale-105 cursor-pointer"
                 onClick={() => setSelectedKey("data")}
               >
                 <img className="absolute h-[87px] left-4 top-4" src="src/assets/game-icons/data-skill.svg" alt="" />
-                <img className="h-30 mix-blend-hard-light expand-circle-mask-animation-with-delay" src="src/assets/game-icons/data-skill-glow.svg" alt="" />
+                <img className="h-30 mix-blend-hard-light expand-circle-mask-animation" 
+                style={{ '--delay': '1' } as React.CSSProperties} src="src/assets/game-icons/data-skill-glow.svg" alt="" />
               </button>
 
             </div>
