@@ -1,5 +1,5 @@
 import BackButton from "../components/BackButton";
-import Personality from "../components/personality";
+import Personality from "../components/Personality";
 import Resource from "../components/Resource";
 import { playerData } from "../data/playerData";
 
