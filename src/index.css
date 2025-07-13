@@ -143,20 +143,32 @@ button:focus-visible {
   }
 }
 .expand-circle-mask-animation {
-  animation: reveal 5s ease-out forwards;
+  animation: reveal-circle 5s ease-out forwards;
   clip-path: circle(0% at center);
 }
 
-@keyframes reveal {
+.expand-circle-mask-animation-with-delay {
+  animation: reveal-circle 3s ease-out forwards;
+  clip-path: circle(0% at center);
+  animation-delay: 1s;
+}
+
+@keyframes reveal-circle {
   to {
     clip-path: circle(150% at center); /* Expand beyond bounds */
   }
 }
 
-.expand-circle-mask-animation-with-delay {
-  animation: reveal 3s ease-out forwards;
-  clip-path: circle(0% at center);
-  animation-delay: 1s;
+.expand-vertical-mask-animation {
+  animation: reveal-vertical 1s ease-in forwards;
+  clip-path: inset(0 0 100% 0); 
+  animation-delay: calc(1s* var(--delay));
+}
+
+@keyframes reveal-vertical {
+  to {
+    clip-path: inset(0 0 0 0); 
+  }
 }
 
 .fade-in {
