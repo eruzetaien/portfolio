@@ -20,6 +20,7 @@
   --grey: #B6C2CB;
   --main-blue: #4EB2FF;
   --yellow: #FFE66B;
+
 }
 
 a {
@@ -142,6 +143,7 @@ button:focus-visible {
     transform: translateY(-6%);
   }
 }
+
 .expand-circle-mask-animation {
   animation: reveal-circle 5s ease-out forwards;
   clip-path: circle(0% at center);
@@ -155,9 +157,9 @@ button:focus-visible {
 }
 
 .expand-vertical-mask-animation {
-  animation: reveal-vertical 1s ease-in forwards;
+  animation: reveal-vertical calc(1s) ease-in forwards;
   clip-path: inset(0 0 100% 0); 
-  animation-delay: calc(1s* var(--delay));
+  animation-delay: calc(1s* var(--delay) );
 }
 
 @keyframes reveal-vertical {
@@ -166,14 +168,19 @@ button:focus-visible {
   }
 }
 
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 2s ease-out forwards;
+.fade-in-animation {
+  animation: fade-in calc(1s* var(--duration) ) ease-out forwards;
+}
+.fade-out-animation {
+  animation: fade-out calc(1s* var(--duration) ) ease-in forwards;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 

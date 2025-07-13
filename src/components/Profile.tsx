@@ -1,14 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { playerData } from "../data/playerData";
+import { useTransitionNavigate } from "../utils/useTransitionNavigate";
 
 
 const Profile: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("profile");
-  };
+  const transitionNavigate = useTransitionNavigate();
+  const handleClick = () => transitionNavigate("profile");
 
   return (
     <button className="w-fit h-fit" onClick={handleClick}>

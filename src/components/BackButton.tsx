@@ -1,16 +1,13 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useTransitionNavigate } from "../utils/useTransitionNavigate";
 
 interface BackButtonProps {
   pageName: string;   
 }
 
 const BackButton: React.FC<BackButtonProps> = ({pageName}) => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/"); 
-  };
+const transitionNavigate = useTransitionNavigate();
+const handleClick = () => transitionNavigate("/");
 
   return (
     <div className="flex items-center gap-x-6">

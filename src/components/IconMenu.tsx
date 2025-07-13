@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useTransitionNavigate } from "../utils/useTransitionNavigate";
 
 interface IconMenuProps {
   panel: string;     // menu-panel background
@@ -10,11 +10,8 @@ interface IconMenuProps {
 }
 
 const IconMenu: React.FC<IconMenuProps> = ({ panel, glow, icon, label, to }) => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate(to);
-  };
+  const transitionNavigate = useTransitionNavigate();
+  const handleClick = () => transitionNavigate(to);
 
   return (
     <button className="flex flex-col items-center hover:scale-110 cursor-pointer transition-transform duration-200" onClick={handleClick}>
