@@ -1,8 +1,9 @@
 import React from "react";
+import Setting from "./Setting";
 
 const Resource: React.FC = () => {
   const gold = 22194;
-  const time = 579;
+  const time = 106;
 
   return (
     <div className="w-full h-fit flex justify-end items-center gap-x-5 ">
@@ -16,13 +17,7 @@ const Resource: React.FC = () => {
         <span className="absolute right-0 font-bold text-xl px-6">{gold.toLocaleString()}</span>
       </div>
 
-    <button className=" hover:scale-105 cursor-pointer">
-      <img
-        src="src/assets/game-icons/setting.svg"
-        alt="Settings"
-        className="w-10"
-      />
-    </button>
+      <Setting />
     </div>
   );
 };
