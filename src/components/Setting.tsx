@@ -20,16 +20,19 @@ const Setting: React.FC = () => {
     };
   }, [isModalOpen]);
 
-  const [isFullscreen, setIsFullscreen] = useState(false);
+  const enterFullscreen = () => {
+    setIsModalOpen(false);
+    document.documentElement.requestFullscreen().catch((err) => {
+        console.error("Failed to enter fullscreen:", err);
+    });
+  };
 
-  useEffect(() => {
-    const handleChange = () => {
-      setIsFullscreen(!!document.fullscreenElement);
-    };
-
-    document.addEventListener("fullscreenchange", handleChange);
-    return () => document.removeEventListener("fullscreenchange", handleChange);
-  }, []);
+  const exitFullscreen = () => {
+    setIsModalOpen(false);
+    document.exitFullscreen().catch((err) => {
+      console.error("Failed to exit fullscreen:", err);
+    });
+  };
 
   const transitionNavigate = useTransitionNavigate();
   const goToMainMenu = () => transitionNavigate("/");
@@ -40,17 +43,7 @@ const Setting: React.FC = () => {
     window.open("https://www.linkedin.com/in/muhammad-ruzain-644614220", "_blank");
   };
 
-  const toggleFullscreen = () => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch((err) => {
-        console.error("Failed to enter fullscreen:", err);
-      });
-    } else {
-      document.exitFullscreen().catch((err) => {
-        console.error("Failed to exit fullscreen:", err);
-      });
-    }
-  };
+
 
   return (
     <>
@@ -70,7 +63,7 @@ const Setting: React.FC = () => {
           
           <button
             onClick={() => setIsModalOpen(false)}
-            className=" aspect-square  flex items-center justify-center text-[#B6C2CB] 
+            className=" cursor-pointer flex items-center justify-center text-[#B6C2CB]  
                       rounded-full hover:scale-110 hover:text-white transition duration-200" 
           >
             <span className="text-6xl">X</span>
@@ -80,12 +73,21 @@ const Setting: React.FC = () => {
           <div className="w-full border-t border-white/20 my-6" />
        
           <div className="flex flex-col">
-            <button
-              onClick={toggleFullscreen}
-              className="cursor-pointer"
-            >
-              <span className="text-[#B6C2CB] text-lg hover:text-white">{isFullscreen ? "Exit Fullscreen" : "Enter Fullscreen"}</span>
-            </button>
+            <div className="flex items-center justify-center">
+              <span className="text-[#B6C2CB] text-lg mr-2">Fullscreen:</span>
+              <button  title="Exit Fullscreen"
+                onClick={exitFullscreen}
+                className="hover:scale-105 cursor-pointer"
+              >
+                <img className="h-10" src="src/assets/buttons/fullscreen-exit.svg"></img>
+              </button>
+              <button  title="Enter Fullscreen"
+                onClick={enterFullscreen}
+                className="hover:scale-105 cursor-pointer"
+              >
+                <img className="h-10" src="src/assets/buttons/fullscreen-enter.svg"></img>
+              </button>
+            </div>
 
             <button
               onClick={goToMainMenu}
