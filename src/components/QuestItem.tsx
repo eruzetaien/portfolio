@@ -57,7 +57,7 @@ const QuestItem: React.FC<QuestItemProps> = ({
       </div>
 
       <div className="w-1/5 bg-[#8FA0D6] rounded-r-[4px] flex justify-center items-center px-7">
-        <button onClick={onButtonClick} className={`${!isCompleted ? "hover:scale-102" : ""}`}>
+        <button onClick={onButtonClick} className={`${!isCompleted ? "hover:scale-105 cursor-pointer" : ""}`}>
           <img
             className={`w-full ${
               !isCompleted ? "drop-shadow-[4px_4px_2px_rgba(0,0,0,0.25)]" : ""

@@ -88,13 +88,13 @@ const Setting: React.FC = () => {
                 onClick={exitFullscreen}
                 className="hover:scale-105 cursor-pointer"
               >
-                <img className="h-10" src={enterFullscreenButton}></img>
+                <img className="h-10" src={exitFullscreenButton}></img>
               </button>
               <button  title="Enter Fullscreen"
                 onClick={enterFullscreen}
                 className="hover:scale-105 cursor-pointer"
               >
-                <img className="h-10" src={exitFullscreenButton}></img>
+                <img className="h-10" src={enterFullscreenButton}></img>
               </button>
             </div>
 
