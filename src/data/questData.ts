@@ -3,6 +3,7 @@ export interface QuestData {
   description: string;
   progress: number;
   rewardImageSrc?: string;
+  link?:string;
 }
 
 export const questTabs = [
@@ -56,6 +57,7 @@ export const questItems: Record<string, QuestData[]> = {
         "Design a portfolio website using gamification concepts to make it more attractive and engaging",
       progress: 50,
       rewardImageSrc: "src/assets/game-icons/reward.svg",
+      link: "https://github.com/eruzetaien/portfolio"
     },
     {
       title: "Monolith-to-Microservices Code Transformation",

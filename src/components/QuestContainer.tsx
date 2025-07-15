@@ -18,6 +18,9 @@ const QuestContainer: React.FC = () => {
               description={item.description}
               progress={item.progress}
               rewardImageSrc={item.rewardImageSrc}
+              {...(item.link && {
+                onButtonClick: () => window.open(item.link, "_blank"),
+              })}
             />
           ))}
         </div>
