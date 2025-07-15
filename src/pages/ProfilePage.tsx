@@ -7,7 +7,7 @@ function ProfilePage() {
   const baseUrl = import.meta.env.BASE_URL
   const containerProfile = baseUrl + "assets/containers/profile.svg";
   const idleSpriteSheet = baseUrl + "assets/idle-spritesheet.png";
-  const containerTag = baseUrl + "/assets/containers/tag.svg";
+  const containerTag = baseUrl + "assets/containers/tag.svg";
 
   const goToBig5PersonalityWeb = () => {
     window.open("https://bigfive-test.com/result/6864b107d71bcf440be34803", "_blank");
