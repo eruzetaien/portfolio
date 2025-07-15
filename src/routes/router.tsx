@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 import EducationPage from "../pages/EducationPage";
 import Homescreen from "../pages/Homescreen";
 import ProfilePage from "../pages/ProfilePage";
@@ -6,29 +6,29 @@ import QuestPage from "../pages/QuestPage";
 import ShopPage from "../pages/ShopPage";
 import SkillPage from "../pages/SkillPage";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
-        path: "/",
+        path: "",
         element: <Homescreen />,
     },
     {
-        path:'/profile', 
+        path: "profile", 
         element: <ProfilePage />,
     },
     {
-        path:'/education', 
+        path: "education", 
         element: <EducationPage />,
     },
     {
-        path:'/skill', 
+        path: "skill", 
         element: <SkillPage />,
     },
     {
-        path:'/quest', 
+        path: "quest", 
         element: <QuestPage />,
     },
     {
-        path:'/shop', 
+        path: "shop", 
         element: <ShopPage />,
     },
 ]);
