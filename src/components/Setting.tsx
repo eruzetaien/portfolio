@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useTransitionNavigate } from "../utils/useTransitionNavigate";
 
 const Setting: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,8 +33,6 @@ const Setting: React.FC = () => {
     });
   };
 
-  const transitionNavigate = useTransitionNavigate();
-  const goToMainMenu = () => transitionNavigate("/");
   const goToGithubPage = () => {
     window.open("https://github.com/eruzetaien", "_blank");
   };
@@ -72,9 +69,9 @@ const Setting: React.FC = () => {
           {/* Divider */}
           <div className="w-full border-t border-white/20 my-6" />
        
-          <div className="flex flex-col">
+          <div className="flex gap-x-10 justify-between">
             <div className="flex items-center justify-center">
-              <span className="text-[#B6C2CB] text-lg mr-2">Fullscreen:</span>
+              <span className="text-[#B6C2CB] text-lg mr-5">Fullscreen:</span>
               <button  title="Exit Fullscreen"
                 onClick={exitFullscreen}
                 className="hover:scale-105 cursor-pointer"
@@ -89,12 +86,15 @@ const Setting: React.FC = () => {
               </button>
             </div>
 
-            <button
-              onClick={goToMainMenu}
-              className="cursor-pointer"
-            >
-              <span className="text-[#B6C2CB] text-lg hover:text-white">Return to Main Menu</span>
-            </button>
+            <div className="flex items-center  text-lg">
+              <span className="text-[#B6C2CB] mr-5">Language: 
+                
+              </span>
+              <div className="flex gap-x-2 items-center">
+                <span className="text-white">English  </span>
+                <img className="h-5 hover:scale-110 cursor-pointer" src="src/assets/buttons/next-button.svg"></img>
+              </div>
+            </div>
           </div>
 
           {/* Divider */}
