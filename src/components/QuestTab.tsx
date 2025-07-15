@@ -13,7 +13,7 @@ const QuestTab: React.FC<QuestTabProps> = ({ tabs, selected, onSelect }) => {
         <button
           key={tab.key}
           onClick={() => onSelect(tab.key)}
-          className={`w-full text-center rounded-[10px] py-3 font-bold text-lg ${
+          className={`w-full text-center rounded-[10px] py-3 cursor-pointer font-bold text-lg ${
             selected === tab.key
               ? "bg-[var(--main-blue)] text-white"
               : "bg-[#495891] text-[var(--grey)]"
