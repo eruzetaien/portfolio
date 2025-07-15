@@ -12,23 +12,23 @@ export const router = createBrowserRouter([
         element: <Homescreen />,
     },
     {
-        path:'profile', 
+        path:'/profile', 
         element: <ProfilePage />,
     },
     {
-        path:'education', 
+        path:'/education', 
         element: <EducationPage />,
     },
     {
-        path:'skill', 
+        path:'/skill', 
         element: <SkillPage />,
     },
     {
-        path:'quest', 
+        path:'/quest', 
         element: <QuestPage />,
     },
     {
-        path:'shop', 
+        path:'/shop', 
         element: <ShopPage />,
     },
 ]);
