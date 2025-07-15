@@ -1,6 +1,18 @@
 import React, { useEffect, useState } from "react";
 
+
+
+
 const Setting: React.FC = () => {
+  const baseUrl =  import.meta.env.BASE_URL ;
+
+  const enterFullscreenButton =  baseUrl + "assets/buttons/fullscreen-enter.svg";
+  const exitFullscreenButton =  baseUrl + "assets/buttons/fullscreen-exit.svg";
+  const nextButton =  baseUrl + "assets/buttons/next-button.svg";
+  const settingIcon =  baseUrl + "assets/game-icons/setting.svg";
+  const githubLogo =  baseUrl + "assets/logo/github.png";
+  const linkedinLogo =  baseUrl + "assets/logo/linkedin.png";
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -49,7 +61,7 @@ const Setting: React.FC = () => {
         onClick={() => setIsModalOpen(true)}
       >
         <img
-          src="src/assets/game-icons/setting.svg"
+          src={settingIcon}
           alt="Settings"
           className="w-10"
         />
@@ -76,13 +88,13 @@ const Setting: React.FC = () => {
                 onClick={exitFullscreen}
                 className="hover:scale-105 cursor-pointer"
               >
-                <img className="h-10" src="src/assets/buttons/fullscreen-exit.svg"></img>
+                <img className="h-10" src={enterFullscreenButton}></img>
               </button>
               <button  title="Enter Fullscreen"
                 onClick={enterFullscreen}
                 className="hover:scale-105 cursor-pointer"
               >
-                <img className="h-10" src="src/assets/buttons/fullscreen-enter.svg"></img>
+                <img className="h-10" src={exitFullscreenButton}></img>
               </button>
             </div>
 
@@ -92,7 +104,7 @@ const Setting: React.FC = () => {
               </span>
               <div className="flex gap-x-2 items-center">
                 <span className="text-white">English  </span>
-                <img className="h-5 hover:scale-110 cursor-pointer" src="src/assets/buttons/next-button.svg"></img>
+                <img className="h-5 hover:scale-110 cursor-pointer" src={nextButton}></img>
               </div>
             </div>
           </div>
@@ -102,10 +114,10 @@ const Setting: React.FC = () => {
 
           <div className=" flex justify-center gap-x-4">
             <button className="hover:scale-110 cursor-pointer" onClick={goToLinkedinPage}>
-              <img className="h-9" src="src/assets/logo/linkedin.png" alt="" />
+              <img className="h-9" src={linkedinLogo} alt="" />
             </button>
             <button className="hover:scale-110 cursor-pointer" onClick={goToGithubPage}>
-              <img className="h-9" src="src/assets/logo/github.png" alt="" />
+              <img className="h-9" src={githubLogo} alt="" />
             </button>
           </div>
 

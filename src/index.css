@@ -37,9 +37,6 @@ h1 {
   line-height: 1.1;
 }
 .sprite {
-  background-image: url('src/assets/idle-spritesheet.png');
-  background-repeat: no-repeat;
-  background-size: 300% 100%;
   animation: play 1s steps(3) infinite;
   image-rendering: pixelated;
 }
@@ -52,16 +49,6 @@ h1 {
     background-position: 150% 0;
   }
 }
-
-@keyframes play2 {
-  from {
-    background-position: 0% 0;
-  }
-  to {
-    background-position: -390px 0;
-  }
-}
-
 
 
 .move-animation {

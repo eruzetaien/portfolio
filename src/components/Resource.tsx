@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import Setting from "./Setting";
 
 const Resource: React.FC = () => {
+  const baseUrl = import.meta.env.BASE_URL;
+  const goldContainer = baseUrl + "assets/containers/resource-gold.svg";
+  const timeContainer = baseUrl + "assets/containers/resource-time.svg";
+
   const initialGold = 22194;
   const earningPerHour = 0;
   const [gold, setGold] = useState(initialGold);
@@ -25,12 +29,12 @@ const Resource: React.FC = () => {
   return (
     <div className="w-full h-fit flex justify-end items-center gap-x-5 ">
       <div className="relative w-3/10 h-fit flex justify-end items-center">
-        <img className="" src="src/assets/containers/resource-time.svg" alt="" />
+        <img className="" src={timeContainer} alt="" />
         <span className="absolute right-0 font-bold text-xl px-6">{time}</span>
       </div>
 
       <div className="relative w-3/10 h-fit flex justify-end items-center ">
-        <img className="" src="src/assets/containers/resource-gold.svg" alt="" />
+        <img className="" src={goldContainer} alt="" />
         <span className="absolute right-0 font-bold text-xl px-6">{gold.toLocaleString()}</span>
       </div>
 

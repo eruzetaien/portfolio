@@ -1,8 +1,12 @@
-import BackButton from "../components/BackButton"
-import Resource from "../components/Resource"
+import BackButton from "../components/BackButton";
+import Resource from "../components/Resource";
+
+
 
 function ShopPage() {
-
+  const baseUrl =  import.meta.env.BASE_URL ;
+  const executiveCostume = baseUrl +  "assets/shop-items/executive-costume.png"
+  const shopItem1 = baseUrl +  "assets/shop-items/item-1.svg"
   return (
     <>
       <div className="w-screen h-screen flex flex-col items-center bg-[#D9D9D9]">
@@ -19,13 +23,13 @@ function ShopPage() {
           <button className="relative w-1/5 h-fit hover:scale-102 ">
               <img
                 className="w-full"
-                src="src/assets/shop-items/item-1.svg"
+                src={shopItem1}
                 alt="costume"
               />
               <img
                 className="w-2/3 absolute top-10 left-1/2 -translate-x-1/2 pointer-events-none"
                 style={{ imageRendering: "pixelated" }}
-                src="src/assets/shop-items/executive-costume.png"
+                src={executiveCostume}
                 alt="costume"
               />
           </button>

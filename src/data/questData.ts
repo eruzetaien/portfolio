@@ -56,7 +56,7 @@ export const questItems: Record<string, QuestData[]> = {
       description:
         "Design a portfolio website using gamification concepts to make it more attractive and engaging",
       progress: 50,
-      rewardImageSrc: "src/assets/game-icons/reward.svg",
+      rewardImageSrc: import.meta.env.BASE_URL +  "assets/game-icons/reward.svg",
       link: "https://github.com/eruzetaien/portfolio"
     },
     {

@@ -1,8 +1,10 @@
-import BackButton from "../components/BackButton"
-import Resource from "../components/Resource"
+import BackButton from "../components/BackButton";
+import Resource from "../components/Resource";
 
 function EducationPage() {
-
+  const baseUrl =  import.meta.env.BASE_URL;
+  const bangkitBanner = baseUrl + "assets/bangkit-banner.svg"
+const uiBanner = baseUrl + "assets/ui-banner.svg"
   return (
     <>
       <div className="w-screen h-screen flex flex-col items-center bg-gradient-to-b from-[#495891] to-[#B9C4DA]">
@@ -17,8 +19,8 @@ function EducationPage() {
 
         <div className="w-full h-full px-16 pb-4 flex flex-col justify-between items-center">
           <div className="flex w-full items-start justify-center pt-5 pb-10 gap-x-12">
-            <img className="w-1/5 expand-vertical-mask-animation" style={{ '--delay': '0.5' } as React.CSSProperties} src="src/assets/bangkit-banner.svg" alt=""/>
-            <img className="w-1/4 expand-vertical-mask-animation" src="src/assets/ui-banner.svg" alt=""/>
+            <img className="w-1/5 expand-vertical-mask-animation" style={{ '--delay': '0.5' } as React.CSSProperties} src={bangkitBanner} alt=""/>
+            <img className="w-1/4 expand-vertical-mask-animation" src={uiBanner} alt=""/>
           </div>
         </div>
       </div>

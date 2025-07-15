@@ -1,5 +1,6 @@
 import React from "react";
 
+
 interface CardItem {
   label: string;
   locked?: boolean;
@@ -11,6 +12,10 @@ interface SkillContainerProps {
 }
 
 const SkillContainer: React.FC<SkillContainerProps> = ({ title, items }) => {
+  const baseUrl =  import.meta.env.BASE_URL;
+  const listIcon = baseUrl +  "assets/game-icons/list.svg";
+  const lockIcon = baseUrl +  "assets/game-icons/lock.svg"; 
+
   return (
     <div className="bg-[#1F263980]  min-w-3/4 h-fit rounded-[10px] flex flex-col p-[10px] fade-in-animation"
         style={{ '--duration': '2.5' } as React.CSSProperties}>
@@ -20,7 +25,7 @@ const SkillContainer: React.FC<SkillContainerProps> = ({ title, items }) => {
       <div className="bg-[#1F263980] w-full flex-1 rounded-b-[10px] flex flex-col px-[15px] py-[10px] gap-y-1">
         {items.map((item, index) => (
           <div key={index} className="flex items-center gap-x-[5px]">
-            <img className={`${item.locked? "w-[15px]":"w-[10px]"}`} src={item.locked? "src/assets/game-icons/lock.svg": "src/assets/game-icons/list.svg"} alt="" />
+            <img className={`${item.locked? "w-[15px]":"w-[10px]"}`} src={item.locked? lockIcon: listIcon} alt="" />
             <span className={`font-bold ${item.locked ? "text-[#838FB5]" : "text-[#DEF1FF]"}`}>
               {item.locked ? "???" : item.label}
             </span>

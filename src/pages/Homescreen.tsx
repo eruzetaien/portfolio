@@ -3,8 +3,17 @@ import Menu from "../components/Menu";
 import Profile from "../components/Profile";
 import Resource from "../components/Resource";
 
+
+
 function Homescreen() {
-const [isVisible, setIsVisible] = useState(true);
+  const baseUrl =  import.meta.env.BASE_URL ;
+  const cloud1 = baseUrl + "assets/clouds/cloud1.png";
+  const cloud2 = baseUrl + "assets/clouds/cloud2.png";
+  const cloud3 = baseUrl + "assets/clouds/cloud3.png";
+  const homescreenBg = baseUrl + "assets/screens/homescreen-bg.png";
+  const homescreenfg = baseUrl + "assets/screens/homescreen-fg.png";
+
+  const [isVisible, setIsVisible] = useState(true);
   const isVisibleRef = useRef(true); // 
   const timeoutRef = useRef<number | null>(null);
   const idleDuration = 10000; // 10 seconds
@@ -39,17 +48,19 @@ const [isVisible, setIsVisible] = useState(true);
 
   return (
     <>
-      <div className="w-screen h-screen bg-cover bg-bottom-left bg-[url(src/assets/screens/homescreen-bg.png)]">
+      <div style={{backgroundImage: `url(${homescreenBg})`}}
+        className="w-screen h-screen bg-cover bg-bottom-left">
             <div className="absolute w-screen h-screen bottom-0 left-0 overflow-hidden">
-              <img className="absolute -bottom-0 move-animation" style={{ '--duration': '2' } as React.CSSProperties} src="src/assets/clouds/cloud1.png"></img>
-              <img className="absolute -bottom-0 move-animation" style={{ '--duration': '3' } as React.CSSProperties} src="src/assets/clouds/cloud1.png"></img>
-              <img className="absolute -bottom-0 move-animation" style={{ '--duration': '5' } as React.CSSProperties} src="src/assets/clouds/cloud2.png"></img>
-              <img className="absolute -bottom-5 move-animation" style={{ '--duration': '7' } as React.CSSProperties} src="src/assets/clouds/cloud3.png"></img>
-              <img className="absolute -bottom-0 move-animation" style={{ '--duration': '11' } as React.CSSProperties} src="src/assets/clouds/cloud2.png"></img>
-              <img className="absolute -bottom-5 move-animation" style={{ '--duration': '13' } as React.CSSProperties} src="src/assets/clouds/cloud3.png"></img>
+              <img className="absolute -bottom-0 move-animation" style={{ '--duration': '2' } as React.CSSProperties} src={cloud1}></img>
+              <img className="absolute -bottom-0 move-animation" style={{ '--duration': '3' } as React.CSSProperties} src={cloud1}></img>
+              <img className="absolute -bottom-0 move-animation" style={{ '--duration': '5' } as React.CSSProperties} src={cloud2}></img>
+              <img className="absolute -bottom-5 move-animation" style={{ '--duration': '7' } as React.CSSProperties} src={cloud3}></img>
+              <img className="absolute -bottom-0 move-animation" style={{ '--duration': '11' } as React.CSSProperties} src={cloud2}></img>
+              <img className="absolute -bottom-5 move-animation" style={{ '--duration': '13' } as React.CSSProperties} src={cloud3}></img>
             </div>
 
-            <div className="absolute w-screen h-screen bg-contain bg-bottom-right bg-no-repeat bg-[url(src/assets/screens/homescreen-fg.png)]">
+            <div style={{backgroundImage: `url(${homescreenfg})`}}
+              className="absolute w-screen h-screen bg-contain bg-bottom-right bg-no-repeat">
               <div className="w-screen h-screen px-16 py-[32px] flex flex-col justify-between items-center">
                 {/* Navbar */}
                 <div

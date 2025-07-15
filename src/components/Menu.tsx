@@ -2,19 +2,20 @@ import React from "react";
 import IconMenu from "./IconMenu";
 
 const Menu: React.FC = () => {
-  const iconPanel = 'src/assets/game-icons/menu-panel.svg';
+  const baseUrl = import.meta.env.BASE_URL;
+  const iconPanel = baseUrl + 'assets/game-icons/menu-panel.svg';
 
-  const educationIcon = 'src/assets/game-icons/education.svg';
-  const educationGlow = 'src/assets/game-icons/education-glow.svg';
+  const educationIcon = baseUrl + 'assets/game-icons/education.svg';
+  const educationGlow = baseUrl + 'assets/game-icons/education-glow.svg';
 
-  const skillIcon = 'src/assets/game-icons/skill.svg';
-  const skillGlow = 'src/assets/game-icons/skill-glow.svg';
+  const skillIcon = baseUrl + 'assets/game-icons/skill.svg';
+  const skillGlow = baseUrl + 'assets/game-icons/skill-glow.svg';
 
-  const questIcon = 'src/assets/game-icons/quest.svg';
-  const questGlow = 'src/assets/game-icons/quest-glow.svg';
+  const questIcon = baseUrl + 'assets/game-icons/quest.svg';
+  const questGlow = baseUrl + 'assets/game-icons/quest-glow.svg';
 
-  const shopIcon = 'src/assets/game-icons/shop.svg';
-  const shopGlow = 'src/assets/game-icons/shop-glow.svg';
+  const shopIcon = baseUrl + 'assets/game-icons/shop.svg';
+  const shopGlow = baseUrl + 'assets/game-icons/shop-glow.svg';
 
   return (
     <div className="w-full h-fit flex justify-center items-center gap-x-10 p-1">

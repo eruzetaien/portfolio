@@ -16,6 +16,7 @@ import { playerPersonality } from "../data/playerData";
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
 
 const Personality: React.FC = () => {
+  const dropButton = import.meta.env.BASE_URL + "assets/buttons/drop-button.svg";
   const [selectedTrait, setSelectedTrait] = useState<keyof typeof playerPersonality | null>(null);
 
   const hexToRgba = (hex: string, alpha: number) => {
@@ -75,7 +76,7 @@ const Personality: React.FC = () => {
               onClick={() => setSelectedTrait(trait as keyof typeof playerPersonality)}
               className="h-full hover:scale-120 cursor-pointer" 
             >
-              <img className=" h-5 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]" src="src/assets/buttons/drop-button.svg" alt="" />
+              <img className=" h-5 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]" src={dropButton} alt="" />
             </button>
           </div>
           

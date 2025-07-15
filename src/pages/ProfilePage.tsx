@@ -4,6 +4,11 @@ import Resource from "../components/Resource";
 import { playerData } from "../data/playerData";
 
 function ProfilePage() {
+  const baseUrl = import.meta.env.BASE_URL
+  const containerProfile = baseUrl + "assets/containers/profile.svg";
+  const idleSpriteSheet = baseUrl + "assets/idle-spritesheet.png";
+  const containerTag = baseUrl + "/assets/containers/tag.svg";
+
   const goToBig5PersonalityWeb = () => {
     window.open("https://bigfive-test.com/result/6864b107d71bcf440be34803", "_blank");
   };
@@ -23,7 +28,7 @@ function ProfilePage() {
         <div className="w-full h-full px-16 flex justify-center items-center overflow-auto">
 
           <div className="relative h-11/12 flex justify-center items-center">
-            <img className="h-full" src="src/assets/containers/profile.svg" alt=""/>
+            <img className="h-full" src={containerProfile} alt=""/>
             <div className="absolute w-full h-full flex py-10 px-16">
               
               <div className="w-1/2 h-99/100 pr-10">
@@ -33,7 +38,8 @@ function ProfilePage() {
                   <h2 className="text-lg tracking-tight text-[var(--yellow)] leading-none">{playerData.job}</h2>
 
                   <div className="flex justify-center">
-                    <div className="w-5/6 aspect-11/14 sprite"></div>
+                    <div style={{ backgroundImage: `url(${idleSpriteSheet})`}} 
+                      className="w-5/6 aspect-11/14 bg-no-repeat bg-[length:300%_100%] sprite"></div>
                   </div>
 
                   <div className="flex flex-col h-full">
@@ -57,7 +63,7 @@ function ProfilePage() {
                   onClick={goToBig5PersonalityWeb}
                   className="hover:scale-105 cursor-pointer"
                 >
-                  <img className="w-2/3" src="src/assets/containers/tag.svg" alt="profile"/>
+                  <img className="w-2/3" src={containerTag} alt="profile"/>
                 </button>
                 <Personality/>
               </div>

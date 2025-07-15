@@ -15,6 +15,10 @@ const QuestItem: React.FC<QuestItemProps> = ({
   onButtonClick,
   rewardImageSrc,
 }) => {
+  const baseUrl =  import.meta.env.BASE_URL ;
+  const completeButton = baseUrl + "assets/buttons/complete-button.svg";
+  const startButton = baseUrl + "assets/buttons/start-button.svg";
+
   const isCompleted = progress >= 100
 
   return (
@@ -60,8 +64,8 @@ const QuestItem: React.FC<QuestItemProps> = ({
             }`}
             src={
               isCompleted
-                ? "src/assets/buttons/complete-button.svg"
-                : "src/assets/buttons/start-button.svg"
+                ? completeButton
+                : startButton
             }
             alt={isCompleted ? "Complete" : "Start"}
           />
