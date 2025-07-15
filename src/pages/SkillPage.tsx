@@ -115,16 +115,16 @@ function SkillPage() {
         <div className="flex w-full h-full px-16 pb-10">
           <div className="relative w-3/5 h-full">
             <div style={{backgroundImage: `url(${brainGlow})`}}
-              className="absolute w-3/4 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+              className="absolute w-[634px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
               aspect-square bg-contain bg-center bg-no-repeat expand-circle-mask-animation"
             ></div>
 
             <div style={{backgroundImage: `url(${brain})`}}
-              className="absolute w-3/4 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+              className="absolute w-[634px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
               aspect-square bg-contain bg-center bg-no-repeat"
             ></div>
 
-            <div className="absolute w-3/4 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+            <div className="absolute w-[634px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
              aspect-square "
             >
               <button className="absolute left-65.5 top-6 hover:scale-105 cursor-pointer"
