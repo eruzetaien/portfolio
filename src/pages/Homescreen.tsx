@@ -7,7 +7,7 @@ function Homescreen() {
 const [isVisible, setIsVisible] = useState(true);
   const isVisibleRef = useRef(true); // 
   const timeoutRef = useRef<number | null>(null);
-  const idleDuration = 5000; // 5 seconds
+  const idleDuration = 10000; // 10 seconds
 
   const handleActivity = () => {
     if (!isVisibleRef.current) {
