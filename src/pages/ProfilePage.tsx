@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import BackButton from "../components/BackButton";
+import LoadingScreen from "../components/LoadingScreen";
 import Personality from "../components/Personality";
 import Resource from "../components/Resource";
 import { playerData } from "../data/playerData";
@@ -12,6 +14,20 @@ function ProfilePage() {
   const goToBig5PersonalityWeb = () => {
     window.open("https://bigfive-test.com/result/6864b107d71bcf440be34803", "_blank");
   };
+
+  // Loading Screen
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    const handleLoad = () => setIsLoaded(true);
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+  if (!isLoaded) return <LoadingScreen />;
 
   return (
     <>

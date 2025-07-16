@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BackButton from "../components/BackButton";
+import LoadingScreen from "../components/LoadingScreen";
 import Resource from "../components/Resource";
 import SkillContainer from "../components/SkillContainer";
 
@@ -99,6 +100,21 @@ function SkillPage() {
   const lockedIcon = baseUrl + "assets/game-icons/locked-skill.svg";
 
   const selectedSection = skillSections.find((s) => s.key === selectedKey);
+
+  // Loading Screen
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    const handleLoad = () => setIsLoaded(true);
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+  if (!isLoaded) return <LoadingScreen />;
+
   return (
     <>
       <div style={{backgroundImage: `url(${skillPage})`}}

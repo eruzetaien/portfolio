@@ -1,10 +1,27 @@
+import { useEffect, useState } from "react";
 import BackButton from "../components/BackButton";
+import LoadingScreen from "../components/LoadingScreen";
 import Resource from "../components/Resource";
 
 function EducationPage() {
   const baseUrl =  import.meta.env.BASE_URL;
   const bangkitBanner = baseUrl + "assets/bangkit-banner.svg"
-const uiBanner = baseUrl + "assets/ui-banner.svg"
+  const uiBanner = baseUrl + "assets/ui-banner.svg"
+
+  // Loading Screen
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    const handleLoad = () => setIsLoaded(true);
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+  if (!isLoaded) return <LoadingScreen />;
+
   return (
     <>
       <div className="w-screen h-screen flex flex-col items-center bg-gradient-to-b from-[#495891] to-[#B9C4DA]">

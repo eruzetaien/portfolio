@@ -1,8 +1,23 @@
-import BackButton from "../components/BackButton"
-import QuestContainer from "../components/QuestContainer"
-import Resource from "../components/Resource"
+import { useEffect, useState } from "react";
+import BackButton from "../components/BackButton";
+import LoadingScreen from "../components/LoadingScreen";
+import QuestContainer from "../components/QuestContainer";
+import Resource from "../components/Resource";
 
 function QuestPage() {
+  // Loading Screen
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    const handleLoad = () => setIsLoaded(true);
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+  if (!isLoaded) return <LoadingScreen />;
 
   return (
     <>

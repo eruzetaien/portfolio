@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import LoadingScreen from "../components/LoadingScreen";
 import Menu from "../components/Menu";
 import Profile from "../components/Profile";
 import Resource from "../components/Resource";
@@ -45,6 +46,20 @@ function Homescreen() {
       window.removeEventListener("click", handleActivity);
     };
   }, []);
+
+  // Loading Screen
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    const handleLoad = () => setIsLoaded(true);
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+  if (!isLoaded) return <LoadingScreen />;
 
   return (
     <>
