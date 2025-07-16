@@ -63,7 +63,7 @@ function ProfilePage() {
                   onClick={goToBig5PersonalityWeb}
                   className="hover:scale-105 cursor-pointer"
                 >
-                  <img className="w-2/3" src={containerTag} alt="profile"/>
+                  <img className="w-[250px]" src={containerTag} alt="profile"/>
                 </button>
                 <Personality/>
               </div>
