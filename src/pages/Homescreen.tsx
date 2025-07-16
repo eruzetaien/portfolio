@@ -47,18 +47,31 @@ function Homescreen() {
     };
   }, []);
 
-  // Loading Screen
-  const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    const handleLoad = () => setIsLoaded(true);
+  const imagesToPreload = [
+    cloud1, cloud2, cloud3, homescreenBg, homescreenfg
+  ];
 
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
-    }
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  // Track loaded images
+  useEffect(() => {
+    let loadedCount = 0;
+
+    const handleLoaded = () => {
+      loadedCount++;
+      if (loadedCount === imagesToPreload.length) {
+        setIsLoaded(true);
+      }
+    };
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.onload = handleLoaded;
+      img.onerror = handleLoaded; // still count on error
+      img.src = src;
+    });
   }, []);
+
   if (!isLoaded) return <LoadingScreen />;
 
   return (
