@@ -2,9 +2,13 @@ import React from "react";
 import { playerData } from "../data/playerData";
 import { useTransitionNavigate } from "../utils/useTransitionNavigate";
 
+const profilePict = import.meta.env.BASE_URL + "assets/profile.svg";
+
+export function getProfileImage() {
+  return [profilePict];
+}
 
 const Profile: React.FC = () => {
-  const profilePict = import.meta.env.BASE_URL + "assets/profile.svg";
 
   const transitionNavigate = useTransitionNavigate();
   const handleClick = () => transitionNavigate("profile");
@@ -21,5 +25,8 @@ const Profile: React.FC = () => {
     </button>
   );
 };
+
+
+
 
 export default Profile;

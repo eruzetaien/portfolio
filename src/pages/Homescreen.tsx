@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import LoadingScreen from "../components/LoadingScreen";
-import Menu from "../components/Menu";
-import Profile from "../components/Profile";
-import Resource from "../components/Resource";
+import Menu, { getMenuImage } from "../components/Menu";
+import Profile, { getProfileImage } from "../components/Profile";
+import Resource, { getResourceImage } from "../components/Resource";
 
 
 
@@ -48,7 +48,8 @@ function Homescreen() {
   }, []);
 
   const imagesToPreload = [
-    cloud1, cloud2, cloud3, homescreenBg, homescreenfg
+    cloud1, cloud2, cloud3, homescreenBg, homescreenfg, 
+    ...getProfileImage(), ...getResourceImage(), ...getMenuImage()
   ];
 
   const [isLoaded, setIsLoaded] = useState(false);

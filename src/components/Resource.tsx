@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Setting from "./Setting";
 
-const Resource: React.FC = () => {
-  const baseUrl = import.meta.env.BASE_URL;
-  const goldContainer = baseUrl + "assets/containers/resource-gold.svg";
-  const timeContainer = baseUrl + "assets/containers/resource-time.svg";
+const baseUrl = import.meta.env.BASE_URL;
+const goldContainer = baseUrl + "assets/containers/resource-gold.svg";
+const timeContainer = baseUrl + "assets/containers/resource-time.svg";
 
+export function getResourceImage() {
+  return [
+    goldContainer, timeContainer
+  ];
+}
+
+const Resource: React.FC = () => {
   const initialGold = 22194;
   const earningPerHour = 0;
   const [gold, setGold] = useState(initialGold);
