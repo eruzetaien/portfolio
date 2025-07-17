@@ -99,21 +99,46 @@ function SkillPage() {
 
   const lockedIcon = baseUrl + "assets/game-icons/locked-skill.svg";
 
-  const selectedSection = skillSections.find((s) => s.key === selectedKey);
+  const imagesToPreload = [
+    skillPage, lockedIcon,
+    brain, brainGlow, 
+    javaIcon, javaGlow,
+    reactIcon, reactGlow,
+    mlIcon, mlGlow,
+    cicdIcon, cicdGlow,
+    dataIcon, dataGlow
+  ];
 
-  // Loading Screen
   const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    const handleLoad = () => setIsLoaded(true);
+  const [loadedCount, setLoadedCount] = useState(0);
 
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
-    }
+  const totalImages = imagesToPreload.length;
+
+  useEffect(() => {
+    let count = 0;
+
+    const handleLoaded = () => {
+      count++;
+      setLoadedCount(count);
+      if (count === totalImages) {
+        setIsLoaded(true);
+      }
+    };
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.onload = handleLoaded;
+      img.onerror = handleLoaded;
+      img.src = src;
+    });
   }, []);
-  if (!isLoaded) return <LoadingScreen />;
+
+  if (!isLoaded) {
+    const progress = Math.floor((loadedCount / totalImages) * 100);
+    return <LoadingScreen progress={progress} />;
+  }
+
+  const selectedSection = skillSections.find((s) => s.key === selectedKey);
 
   return (
     <>

@@ -15,19 +15,39 @@ function ProfilePage() {
     window.open("https://bigfive-test.com/result/6864b107d71bcf440be34803", "_blank");
   };
 
-  // Loading Screen
-  const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    const handleLoad = () => setIsLoaded(true);
 
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
-    }
+  const imagesToPreload = [
+    containerProfile, idleSpriteSheet, containerTag, 
+  ];
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
+
+  const totalImages = imagesToPreload.length;
+
+  useEffect(() => {
+    let count = 0;
+
+    const handleLoaded = () => {
+      count++;
+      setLoadedCount(count);
+      if (count === totalImages) {
+        setIsLoaded(true);
+      }
+    };
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.onload = handleLoaded;
+      img.onerror = handleLoaded;
+      img.src = src;
+    });
   }, []);
-  if (!isLoaded) return <LoadingScreen />;
+
+  if (!isLoaded) {
+    const progress = Math.floor((loadedCount / totalImages) * 100);
+    return <LoadingScreen progress={progress} />;
+  }
 
   return (
     <>

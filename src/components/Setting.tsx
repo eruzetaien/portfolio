@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-
-
-
 const Setting: React.FC = () => {
   const baseUrl =  import.meta.env.BASE_URL ;
 

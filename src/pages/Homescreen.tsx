@@ -53,14 +53,17 @@ function Homescreen() {
   ];
 
   const [isLoaded, setIsLoaded] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
 
-  // Track loaded images
+  const totalImages = imagesToPreload.length;
+
   useEffect(() => {
-    let loadedCount = 0;
+    let count = 0;
 
     const handleLoaded = () => {
-      loadedCount++;
-      if (loadedCount === imagesToPreload.length) {
+      count++;
+      setLoadedCount(count);
+      if (count === totalImages) {
         setIsLoaded(true);
       }
     };
@@ -68,12 +71,15 @@ function Homescreen() {
     imagesToPreload.forEach((src) => {
       const img = new Image();
       img.onload = handleLoaded;
-      img.onerror = handleLoaded; // still count on error
+      img.onerror = handleLoaded;
       img.src = src;
     });
   }, []);
 
-  if (!isLoaded) return <LoadingScreen />;
+  if (!isLoaded) {
+    const progress = Math.floor((loadedCount / totalImages) * 100);
+    return <LoadingScreen progress={progress} />;
+  }
 
   return (
     <>

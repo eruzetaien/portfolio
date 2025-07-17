@@ -10,21 +10,40 @@ function ShopPage() {
   const executiveCostume = baseUrl +  "assets/shop-items/executive-costume.png"
   const shopItem1 = baseUrl +  "assets/shop-items/item-1.svg"
 
-  // Loading Screen
+  const imagesToPreload = [
+    shopItem1, executiveCostume
+  ];
+
   const [isLoaded, setIsLoaded] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
+
+  const totalImages = imagesToPreload.length;
+
   useEffect(() => {
-    const handleLoad = () => setIsLoaded(true);
+    let count = 0;
 
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
-    }
+    const handleLoaded = () => {
+      count++;
+      setLoadedCount(count);
+      if (count === totalImages) {
+        setIsLoaded(true);
+      }
+    };
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.onload = handleLoaded;
+      img.onerror = handleLoaded;
+      img.src = src;
+    });
   }, []);
-  if (!isLoaded) return <LoadingScreen />;
 
+  if (!isLoaded) {
+    const progress = Math.floor((loadedCount / totalImages) * 100);
+    return <LoadingScreen progress={progress} />;
+  }
 
+  
   return (
     <>
       <div className="w-screen h-screen flex flex-col items-center bg-[#D9D9D9]">
