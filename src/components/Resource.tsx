@@ -34,12 +34,12 @@ const Resource: React.FC = () => {
 
   return (
     <div className="w-full h-fit flex justify-end items-center gap-x-5 ">
-      <div className="relative w-3/10 h-fit flex justify-end items-center">
+      <div className="relative w-[212px] h-fit flex justify-end items-center">
         <img className="" src={timeContainer} alt="" />
         <span className="absolute right-0 font-bold text-xl px-6">{time}</span>
       </div>
 
-      <div className="relative w-3/10 h-fit flex justify-end items-center ">
+      <div className="relative w-[212px] h-fit flex justify-end items-center ">
         <img className="" src={goldContainer} alt="" />
         <span className="absolute right-0 font-bold text-xl px-6">{gold.toLocaleString()}</span>
       </div>
