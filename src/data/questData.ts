@@ -52,10 +52,18 @@ export const questItems: Record<string, QuestData[]> = {
   ],
   software: [
     {
+      title: "KnowMore",
+      description:
+        "Build a web-based multiplayer game to help us know more about ourselves and the people around us.",
+      progress: 40,
+      rewardImageSrc: import.meta.env.BASE_URL +  "assets/game-icons/reward-6000.svg",
+      link: "https://github.com/eruzetaien/KnowMore"
+    },
+    {
       title: "Portfolio",
       description:
         "Design a portfolio website using gamification concepts to make it more attractive and engaging",
-      progress: 50,
+      progress: 75,
       rewardImageSrc: import.meta.env.BASE_URL +  "assets/game-icons/reward.svg",
       link: "https://github.com/eruzetaien/portfolio"
     },
