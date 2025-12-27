@@ -1,0 +1,35 @@
+name: Daily XP Gain
+
+on:
+  schedule:
+    - cron: "55 16 * * *" # 23:55 local time (UTC+7)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-xp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Run XP update
+        run: node scripts/dailyXp.js
+
+      - name: Commit changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add src/data/playerData.ts
+          git diff --cached --quiet && exit 0
+          git commit -m "gain (+${GAINED_XP} XP)"
+          git push
