@@ -26,10 +26,10 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "system"
+          git config --local user.email "system@example.com"
 
           git add src/data/playerData.ts
           git diff --cached --quiet && exit 0
-          git commit -m "gain (+${GAINED_XP} XP)"
+          git commit -m "Gained +${GAINED_XP} XP"
           git push
