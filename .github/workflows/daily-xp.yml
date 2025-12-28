@@ -26,8 +26,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --local user.name "system"
-          git config --local user.email "system@example.com"
+          git config --local user.name "${{ secrets.MY_GITHUB_USER }}"
+          git config --local user.email "${{ secrets.MY_GITHUB_EMAIL }}"
 
           git add src/data/playerData.ts
           git diff --cached --quiet && exit 0
