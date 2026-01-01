@@ -68,7 +68,7 @@ function ProfilePage() {
             <div className="absolute w-full h-full flex py-10 px-16">
               
               <div className="w-1/2 h-99/100 pr-10">
-                <div className="flex flex-col h-full">
+                <div className="flex flex-col h-full ">
                   
                   <h1 className="font-bold tracking-tight text-white">{playerData.name}</h1>
                   <h2 className="text-lg tracking-tight text-[var(--yellow)] leading-none">{playerData.job}</h2>
@@ -78,12 +78,12 @@ function ProfilePage() {
                       className="w-5/6 aspect-11/14 bg-no-repeat bg-[length:300%_100%] sprite"></div>
                   </div>
 
-                  <div className="flex flex-col h-full">
+                  <div className="flex flex-col h-full mt-4">
                     <div className="flex justify-between items-end">
                       <h2 className="text-lg text-[var(--light-green)]"> Lv. <span className="font-bold">{playerData.level}</span></h2>
-                      <h2 className="text-sm font-bold text-[var(--light-green)]"> {playerData.xp}/{playerData.maxXp}</h2>
+                      <h2 className=" font-bold text-[var(--light-green)]"> {playerData.xp}/{playerData.maxXp}</h2>
                     </div>
-                    <div className="w-full h-1/5 bg-[#495891] rounded-sm overflow-hidden">
+                    <div className="w-full h-1/6 bg-[#495891] rounded-sm overflow-hidden">
                       <div
                         className="h-full bg-[var(--light-green)] rounded-sm"
                         style={{ width: `${playerData.xp/playerData.maxXp * 100}%` }}
