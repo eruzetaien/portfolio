@@ -2,7 +2,7 @@ export const playerData = {
   name: "Ruzain", 
   job: "Backend Developer", 
   level: 21,
-  xp: 36625,
+  xp: 37625,
   maxXp: 75937,
 };
 export const playerPersonality = {
