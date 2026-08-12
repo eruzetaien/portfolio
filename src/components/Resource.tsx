@@ -13,7 +13,7 @@ export function getResourceImage() {
 
 const Resource: React.FC = () => {
   const initialGold = 22194;
-  const earningPerHour = 31250;
+  const earningPerHour = 37500;
   const [gold, setGold] = useState(initialGold);
   const [time, setTime] = useState(0);
 
