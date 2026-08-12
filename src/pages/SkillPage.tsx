@@ -14,6 +14,7 @@ const skillSections = [
       { label: "Golang" },
       { label: "JavaScript"},
       { label: "C#" },
+      { label: "Rust"},
       { label: "???", locked: true },
       { label: "???", locked: true },
     ],
