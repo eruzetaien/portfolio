@@ -83,7 +83,7 @@ function ProfilePage() {
                       <h2 className="text-lg text-[var(--light-green)]"> Lv. <span className="font-bold">{playerData.level}</span></h2>
                       <h2 className=" font-bold text-[var(--light-green)]"> {playerData.xp}/{playerData.maxXp}</h2>
                     </div>
-                    <div className="w-full h-1/6 bg-[#495891] rounded-sm overflow-hidden">
+                    <div className="w-full h-[10px] bg-[#495891] rounded-sm overflow-hidden">
                       <div
                         className="h-full bg-[var(--light-green)] rounded-sm"
                         style={{ width: `${playerData.xp/playerData.maxXp * 100}%` }}
