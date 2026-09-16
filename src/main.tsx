@@ -8,12 +8,12 @@ import UnsupportedScreen from './pages/UnsupportedScreen'
 
 function Root() {
     const [isUnsupported, setIsUnsupported] = useState(
-      window.matchMedia('(max-width: 1328px), (max-height: 799px)').matches
+      window.matchMedia('(max-width: 1328px), (max-height: 640px)').matches
     )
 
 useEffect(() => {
     const mediaQuery = window.matchMedia(
-        '(max-width: 1328px), (max-height: 799px)'
+        '(max-width: 1328px), (max-height: 640px)'
     )
 
     const handleChange = (event: MediaQueryListEvent) => {
